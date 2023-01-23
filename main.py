@@ -1040,7 +1040,6 @@ class ExpressionGenerator (wx.Dialog):
                 if dialog.ShowModal() == wx.ID_OK:
                     data = dialog.GetColourData()
                     color = data.GetColour()
-                dialog.Destroy()
                 return color
                 
         def OnBgChange (self, event):
