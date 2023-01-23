@@ -1272,7 +1272,7 @@ class ExpressionGenerator (wx.Dialog):
                 for q_list, a_list in zip(q_grp, a_grp):
                         q_num_grp = [re.split('[+*/-]', q) for q in q_list]
                         for step in range(self.max_steps):
-                            row = ''.join([ f(q_num[step]) if (not self.hide_ques_index and step == 0) else (q_num[step]).rjust(int(self.adjust_value - left_indent)) for q_num in q_num_grp])
+                            row = ''.join([ f(q_num[step]) if (not self.hide_ques_index and step == 0) else (q_num[step]).rjust(int(self.adjust_value)) for q_num in q_num_grp])
                             buf = buf + row + ('\r\n') * self.line_spacing
                         bufs.append(buf)
                         buf = ''
